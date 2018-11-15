@@ -114,6 +114,7 @@ class App extends Component {
         </header>
         <h2>Favorite Movies</h2>
         <ListFavoriteMovies favoriteMovies={getFavoriteMovies()}/>
+        <footer className="App-footer">Milsonei dos Santos Cardoso - 15/11/2018</footer>
       </div>
     );
   }
