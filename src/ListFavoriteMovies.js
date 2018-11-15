@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FavoriteMovie from './FavoriteMovie'
+/* Componente que gera a lista de filmes favoritos */
 class ListFavoriteMovies extends Component{
 	render(){     
         return (

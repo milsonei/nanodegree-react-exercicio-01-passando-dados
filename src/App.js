@@ -97,6 +97,7 @@ const profiles = [
   },
 ];
 
+/* Recupera a lista de todos os filmes favoritos associada com o nome do usuário e com o nome do filme*/
 const getFavoriteMovies = () => profiles.map(profile => ({
   id: profile.id,
   userName : users[parseInt(profile.userID, 10)].name,
