@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ListFavoriteMovies from './ListFavoriteMovies'
+import FavoriteMoviesList from './FavoriteMoviesList'
 
 /*
 Use React and the data below to display a list of users alongside their favorite movies.
@@ -97,23 +97,16 @@ const profiles = [
   },
 ];
 
-/* Recupera a lista de todos os filmes favoritos associada com o nome do usuário e com o nome do filme*/
-const getFavoriteMovies = () => profiles.map(profile => ({
-  id: profile.id,
-  userName : users[parseInt(profile.userID, 10)].name,
-  movieName: movies[parseInt(profile.favoriteMovieID, 10)].name
-}));
-
 class App extends Component {
   render() {
     return (
-      <div>
+      <div>     
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ReactND - Coding Practice</h1>
-        </header>
+        </header>       
         <h2>Favorite Movies</h2>
-        <ListFavoriteMovies favoriteMovies={getFavoriteMovies()}/>
+        <FavoriteMoviesList profiles={profiles} movies={movies} users={users}/>
         <footer className="App-footer">Milsonei dos Santos Cardoso - 15/11/2018</footer>
       </div>
     );
